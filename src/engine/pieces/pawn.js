@@ -9,7 +9,6 @@ export default class Pawn extends Piece {
     }
 
     isSquareEmpty(board, row, col) {
-        console.log("row: " + row + "col: " + col);
         if (board.getPiece(Square.at(row, col)) === undefined) {
             return true;
         }
@@ -18,7 +17,6 @@ export default class Pawn extends Piece {
 
     getAvailableMoves(board) {
         let location = board.findPiece(this)
-        console.log("func- " + this.isSquareEmpty(board, location.row, location.col));
 
         const moves = []
         if (this.player === Player.WHITE) {
